@@ -1,0 +1,57 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Yang Jeongin</title>
+</head>
+<body>
+
+<div class="cursor"></div>
+
+    <div class="container">
+        <div class="title">
+            <h2>Yang Jeongin</h2>
+        </div>
+
+            <div class="portrait">
+            <img src="jg.jpg" alt="Jeongin">
+        </div>    
+
+        <div class="menu">
+            <!-- <button onclick="hwan">En cours de construction...</button> -->
+            <audio controls autoplay>
+                <source src="okinawa.mp3" type="audio/mp3">
+            </audio>
+            <!-- <button onclick="hwan">personnalité</button>
+            <button onclick="hwan">créateur</button> -->
+        </div>
+
+        <footer>
+            <div class="créateur">
+                <h3>
+                    avatar fictif de chez Eyescream
+                    <span>@YangJeonginSKZ</span>
+                </h3>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+        })
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
+    </script>
+
+</body>
+</html>
